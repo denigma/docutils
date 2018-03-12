@@ -1327,7 +1327,8 @@ class document(Root, Structural, Element):
         """
         for name in node['names']:
             if name in self.nameids:
-                self.set_duplicate_name_id(node, id, name, msgnode, explicit)
+                #self.set_duplicate_name_id(node, id, name, msgnode, explicit)
+                pass  # CHANGED to allow duplicate references.
             else:
                 self.nameids[name] = id
                 self.nametypes[name] = explicit
